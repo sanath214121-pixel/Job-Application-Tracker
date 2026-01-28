@@ -31,6 +31,8 @@ A full-stack Job Application Tracker that helps users manage job applications, t
 - VS Code
 - MongoDB Atlas Cloud
 ## Screenshots
+Below are screenshots showcasing the dashboard, job tracking workflow, and clean UI design.
+
 
 ### Dashboard View
 ![Dashboard](screenshots/dashboard.png.png)
