@@ -31,8 +31,6 @@ A full-stack Job Application Tracker that helps users manage job applications, t
 - VS Code
 - MongoDB Atlas Cloud
 
-**screenshots**
-screenshots/add-job.png.png
 
 
 
