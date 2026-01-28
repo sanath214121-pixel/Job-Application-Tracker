@@ -32,8 +32,7 @@ A full-stack Job Application Tracker that helps users manage job applications, t
 - MongoDB Atlas Cloud
 
 **screenshots**
+screenshots/add-job.png.png
 
- dashboard.png
- add-job.png
 
 
