@@ -8,12 +8,24 @@ require("dotenv").config();
 const connectDB = require("./config/db");
 
 const app = express();
+
+ const allowedOrigins = [
+  process.env.CLIENT_URL, // production (Vercel)
+  "http://localhost:5173" // local dev
+].filter(Boolean);
+
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: function (origin, callback) {
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    } else {
+      return callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true
 }));
 
-app.use(cors());
 app.use(express.json());
 
 app.get("/healthcheck", (req, res) => {
