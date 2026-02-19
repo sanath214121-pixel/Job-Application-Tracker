@@ -16,9 +16,7 @@ function Login() {
     try {
       const res = await api.post("/auth/login", { email, password });
 
-      const token =
-        res?.data?.token || res?.data?.jwt || res?.data?.accessToken;
-
+      const token = res?.data?.token || res?.data?.jwt || res?.data?.accessToken;
       if (!token) throw new Error("Token not found in login response");
 
       localStorage.setItem("token", token);
@@ -57,8 +55,6 @@ function Login() {
           Login
         </button>
       </form>
-
-      {/* ✅ Register link MUST be inside return */}
 
       <p style={{ marginTop: 14 }}>
         Don’t have an account? <Link to="/register">Register</Link>
