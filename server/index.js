@@ -12,6 +12,8 @@ const app = express();
  const allowedOrigins = [
   process.env.CLIENT_URL, // production (Vercel)
   "http://localhost:5173" // local dev
+  "https://job-tracker-h7dool600-sanath-kumars-projects-c5194ee6.vercel.app",
+  "https://job-tracker-lime-beta.vercel.app",
 ].filter(Boolean);
 
 app.use(cors({
